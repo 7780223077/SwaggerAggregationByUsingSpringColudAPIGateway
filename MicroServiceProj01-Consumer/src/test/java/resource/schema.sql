@@ -1,0 +1,19 @@
+-- Create the DEPT table
+--CREATE TABLE DEPT (
+--    deptno INTEGER PRIMARY KEY,
+--    dname VARCHAR(50),
+--    loc VARCHAR(50)
+--);
+--
+---- Create the EMP table
+--CREATE TABLE EMP (
+--    empno INTEGER PRIMARY KEY,
+--    ename VARCHAR(50),
+--    job VARCHAR(50),
+--    mgr INTEGER,
+--    hiredate DATE,
+--    sal DOUBLE,
+--    comm DOUBLE,
+--    deptno INTEGER,
+--    CONSTRAINT fk_dept FOREIGN KEY (deptno) REFERENCES DEPT(deptno) ON DELETE CASCADE
+--);

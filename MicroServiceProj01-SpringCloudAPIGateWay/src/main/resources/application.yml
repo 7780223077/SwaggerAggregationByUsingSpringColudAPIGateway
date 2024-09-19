@@ -1,0 +1,81 @@
+spring:
+  application:
+    name: MicroServiceProj01-SpringCloudAPIGateWay
+    
+  cloud:
+    gateway:
+      httpclient:
+        connect-timeout: 20000
+        response-timeout: 7s
+      routes:
+      - id: Producer
+        uri: lb://Producer
+        predicates:
+        - Path=/producer/**, /Producer/v3/api-docs
+      
+      - id: Consumer
+        uri: lb://Consumer
+        predicates:
+        - Path=/consumer/**, /Consumer/v3/api-docs
+     
+#      - id: Producer
+#        uri: lb://Producer
+#        predicates:
+#        - Path=/producer/**, /Producer/v3/api-docs
+#        filters:
+#        - StripPrefix=1
+#        
+#      - id: Consumer
+#        uri: lb://Consumer
+#        predicates:
+#        - Path=/consumer/**, /Consumer/v3/api-docs
+#        filters:
+#        - StripPrefix=1
+   
+   
+springdoc:
+  enable-native-support: true
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    config-url: /v3/api-docs/swagger-config
+    urls:
+    - url: /v3/api-docs
+      name: API Gateway Service
+      display-name: API Gateway Service
+    - url: /Consumer/v3/api-docs
+      name: consumer service
+      display-name: consumer service
+    - url: /Producer/v3/api-docs
+      name: producer service
+      display-name: producer service
+        
+#springdoc:
+#  enable-native-support: true
+#  api-docs:
+#    enabled: true
+#  swagger-ui:
+#    enabled: true
+#    path: /swagger-ui.html
+#    config-url: /v3/api-docs/swagger-config
+#    urls:
+#    - url: /v3/api-docs
+#      name: API Gateway Service
+#      display-name: API Gateway Service
+#    - url: /Consumer/v3/api-docs
+#      name: customer Service
+#      display-name: customer Service
+#    - url: /Producer/v3/api-docs
+#      name: producer Service
+#      display-name: producer Service
+    
+server:
+  port: 8080
+    
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+      

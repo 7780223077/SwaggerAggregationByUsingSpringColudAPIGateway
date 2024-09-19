@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: Consumer
+
+  # Datasource
+#  datasource:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@localhost:1521:orcl
+#    username: c##charan
+#    password: cherry007
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+
+
+openapi:
+  service:
+    title: Consumer Service doc
+    version: 1.0.0
+    description: Manages the Employee API's
+    url: http://localhost:8080
+
+springdoc:
+  api-docs:
+    path: /Consumer/v3/api-docs
+  swagger-ui:
+    path: /Consumer/swagger-ui.html
+    
+# server port
+server:
+  port: 5050
+  
+eureka:
+  client:
+    service-url: 
+      default-zone: http://localhost:8761/eureka

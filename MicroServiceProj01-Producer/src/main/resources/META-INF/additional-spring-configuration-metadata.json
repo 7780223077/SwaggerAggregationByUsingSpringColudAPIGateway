@@ -1,0 +1,25 @@
+{
+	"properties": [
+		{
+			"name": "openapi.service.title",
+			"type": "java.lang.String",
+			"description": "Title for the OpenAPI service"
+		},
+		{
+			"name": "openapi.service.version",
+			"type": "java.lang.String",
+			"description": "Version of the OpenAPI service",
+			"defaultValue": "1.0.0"
+		},
+		{
+			"name": "openapi.service.description",
+			"type": "java.lang.String",
+			"description": "description of the OpenAPI service"
+		},
+		{
+			"name": "openapi.service.url",
+			"type": "java.lang.String",
+			"description": "URL of the OpenAPI service"
+		}
+	]
+}

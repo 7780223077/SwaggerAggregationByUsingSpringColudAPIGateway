@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: Producer
+
+  # Datasource
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: c##charan
+    password: cherry007
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+openapi:
+  service:
+    title: Producer Service doc
+    version: 1.0.0
+    description: Manages the Employee API's
+    url: http://localhost:8080
+    
+springdoc:
+  api-docs:
+    path: /Producer/v3/api-docs
+  swagger-ui:
+    path: /Producer/swagger-ui.html
+
+# server port
+server:
+  port: 4040
+  
+eureka:
+  client:
+    service-url: 
+      default-zone: http://localhost:8761/eureka

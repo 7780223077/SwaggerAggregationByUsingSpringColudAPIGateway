@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: MicroServiceProj01-EurekaServer
+    
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    
+server:
+  port: 8761

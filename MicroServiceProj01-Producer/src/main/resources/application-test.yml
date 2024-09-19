@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: SpringDataJpa-Projection
+
+  # Datasource
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: c##charan
+    password: cherry007
+  h2:
+    console:
+      enabled: true
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+# server port
+server:
+  port: 4040
+
+logging:
+  level:
+    org.springframework: INFO
